@@ -1,3 +1,4 @@
+# LIST COMPREHENTION
 # Irá exibir eixo_y de acordo com a equação e a variancia do eixo_x
 eixo_x = [x for x in range(11)]
 
