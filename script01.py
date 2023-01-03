@@ -11,13 +11,16 @@ O QUE TENHO QUE FAZER?
 entrada         = int(input("informe um valor: "))
 binario_inverso = 0
 binario         = 0
+entrada_externa = entrada
 
-while entrada > 0:   
+for entrada in range(0,entrada_externa):
+#while entrada > 0:   
     binario_inverso   = binario_inverso * 10 + entrada % 2
     entrada //= 2
-while binario_inverso > 0:
-    binario = binario * 10 + binario_inverso % 10
-    binario_inverso //= 10
+#while binario_inverso > 0:
+    for binario in range(binario_inverso,binario):
+        binario = binario * 10 + binario_inverso % 10
+        binario_inverso //= 10
 print(binario)
 # vou precisar fazer um laço que calcule o resto desse numero até ele ser maior que 2
 # vou precisar de um (operador auxiliar que guardará os restos das divisões de forma que vá os resto 
