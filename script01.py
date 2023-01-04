@@ -9,19 +9,18 @@ O QUE TENHO QUE FAZER?
 - pegar o resto do numero...
 '''
 entrada         = int(input("informe um valor: "))
-binario_inverso = 0
+contador        = 0
 binario         = 0
-entrada_externa = entrada
+entrada_inicial = entrada
+str_binario     = ''
 
-for entrada in range(0,entrada_externa):
-#while entrada > 0:   
-    binario_inverso   = binario_inverso * 10 + entrada % 2
-    entrada //= 2
-#while binario_inverso > 0:
-    for binario in range(binario_inverso,binario):
-        binario = binario * 10 + binario_inverso % 10
-        binario_inverso //= 10
-print(binario)
-# vou precisar fazer um laço que calcule o resto desse numero até ele ser maior que 2
-# vou precisar de um (operador auxiliar que guardará os restos das divisões de forma que vá os resto 
-# diretamente) e um (operador que guardará a fatoração do numero até ele ser maior que 2)
+for contador in range(contador, entrada_inicial):
+    if entrada >= 2:
+        binario = entrada % 2
+        entrada = entrada // 2
+        contador = entrada
+        str_binario = str(binario) + str_binario
+    else:
+        break
+str_binario = str(1) + str_binario
+print(str_binario)
