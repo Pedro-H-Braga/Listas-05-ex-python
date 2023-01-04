@@ -15,13 +15,14 @@ entrada = int(input("Informe um valor: "))
 fatorial = 1
 contador = 1
 
-while contador <= entrada:
-
+for contador in range(contador, entrada):
+    contador += 1
     if entrada == 0:
         fatorial = 1
         break
+    elif entrada < 0:
+        print('não existe fatorial de numero negativo') 
     else:      
         fatorial *= contador
-        contador += 1
 
 print(f"Fatorial de {entrada} e: {fatorial}")
