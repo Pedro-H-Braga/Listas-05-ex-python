@@ -1,4 +1,7 @@
 '''
+Dado o código a seguir, implemente um programa que faça o mesmo utilizando APENAS um laço
+WHILE:
+
 entrada = input('informe uma palavra: ')
 contador = 0
 guarda_palavra_anterior = ''
@@ -11,44 +14,26 @@ while contador >= 0:
     print(percorre_entrada[::-1])
     contador -= 1
 
-exibir a verredura da string 
-do começo pro final até chegar no tamanho_variavel, quando chegar no final
-exiba do final ao começo dela, quando chegar no começo, comece a exibir a string 
-ou seja:
-enquanto contador < tamanho_variavel and contador invertido > tamanho_inicial
-
 '''
 
-variavel           = '1234567890'
-tamanho_variavel   = len(variavel)
-contador           = 0
-contador_invertido = tamanho_variavel
-tamanho_inicial    = 0
+variavel                  = '1234567890'
+tamanho_variavel          = (len(variavel))+1
 
-'''
-while True:  
-    if contador < tamanho_variavel: 
-        print(variavel[:contador])
-        contador += 1 
-        
-    elif contador_invertido >= tamanho_inicial:
-        print(variavel[:contador_invertido])
-        contador_invertido -= 1
-        
-    else: break
-'''
-''' TESTE '''    
+contador                  = 0
+contador_invertido        = tamanho_variavel
+
+tamanho_inicial           = 0
+tamanho_percorre_variavel = 0
+
+'''2 laços, um crescente e outro decrecente, quando um termina começa o outro'''
 for contador in range(contador,tamanho_variavel):
-    if contador < tamanho_variavel: 
-        print(variavel[:contador])
-        contador += 1 
-            #contador_invertido >= tamanho_inicial:
-    elif contador > tamanho_variavel:
-        for contador_invertido in range(tamanho_variavel):
-        
-            print(variavel[:contador_invertido])
-            contador_invertido -= 1
-    
-    
+    # exiba a input do início até o tamanho do contador
+    print(variavel[:contador])
+    contador += 1 
+    # contador_invertido já recebe menos 1 para não repetir o estado final da palavra
+    contador_invertido -= 1
 
-
+for tamanho_percorre_variavel in range(tamanho_percorre_variavel, tamanho_variavel):
+    contador_invertido -= 1
+    print(variavel[:contador_invertido])
+    tamanho_percorre_variavel = len(variavel[:contador_invertido])
