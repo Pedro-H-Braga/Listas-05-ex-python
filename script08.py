@@ -10,8 +10,6 @@ NATAL
 fazer laço que exibe posição por posição até chegar na posição final
 '''
 entrada = input('informe uma palavra: ')
-contador_inverso = 0
-contador = 0
 tamanho_entrada = len(entrada) 
 # faz cortar do ultimo ao primeiro, enves do inverso
 entrada = entrada[::-1]

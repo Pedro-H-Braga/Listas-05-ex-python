@@ -21,31 +21,47 @@ LÓGICA 2 COM WHILE:
 
 contador_vogais = 0                             # contador vogal 
 vogais = 'aáãâeéêiíîoóõôuúû'                    # vogais que irão ser encontradas na string
-percorre_vogais = ''
+vogais = vogais[::-1]
 tamanho_vogais = len(vogais)                    # pega o tamanho da string
+contador_vogais = tamanho_vogais
+tamanho_percorre_vogais = 0
+quantidade_vogais = 0
 
-contador_string = 0                             # contador string
 entrada = input('digite algo: ')    # tem 14 vogais
-percorre_string = ''
-tamanho_string = len(entrada)                   # pega o tamanho da string           
-               
-entrada = entrada.lower()                       # transformar as entradas em minusculo para não ter divergencia na contagem
+entrada = entrada.lower() # transformar as entradas em minusculo para não ter divergencia na contagem
+entrada = entrada[::-1]
+tamanho_string = len(entrada) # pega o tamanho da string           
+contador_string = tamanho_string # contador inverso
 tamanho_percorre_string = 0
-#while contador_string < tamanho_string:         # percorre a string até o contador chegar ao tamanho máximo dela
-for tamanho_percorre_string in range(tamanho_percorre_string,tamanho_string-1):
-    percorre_string = entrada[contador_string:tamanho_string]
-
+               
+for tamanho_percorre_string in range(tamanho_percorre_string, tamanho_string):
+    ''' Posso fazer um laço que para cada posicao de percorre 
+    string, verifique toda a string vogais vendo se alguma 
+    vogal tem naquela posição da string'''
+    # STRING
+    contador_string -= 1
+    percorre_string = entrada[contador_string::tamanho_string]
     tamanho_percorre_string = len(percorre_string)
     
-    contador_string += 1
-    
-    percorre_vogais = vogais[contador_vogais:tamanho_vogais]
-    contador_vogais += 1
-    
-    if percorre_vogais in percorre_string:
-        contador_vogais += 1
-    
-    elif percorre_vogais not in percorre_string:
-        contador_string += 1
+    # VOGAIS
+    for contador_vogais in range(tamanho_vogais):
+        contador_vogais -= 1
+        percorre_vogais = vogais[contador_vogais::tamanho_vogais]
+        if percorre_vogais in percorre_string:
+         quantidade_vogais += 1
+    	 
 
-print(f"Tem {contador_vogais-1} vogais na palavra: {entrada}")
+print(f"Tem {quantidade_vogais} vogais na palavra: {entrada}")
+
+'''Para cada percorre_string varra toda string vogais comparando com percorre_string'''
+'''Verificando, if letra de percorre_string igual a letra de percorre vogais, quantidade_vogais += 1'''
+
+
+'''
+    # VOGAIS
+    for tamanho_percorre_vogais in range(tamanho_percorre_vogais,tamanho_vogais):
+        contador_vogais -= 1
+        percorre_vogais = vogais[contador_vogais:tamanho_vogais]
+        tamanho_percorre_vogais = len(percorre_vogais)
+        print(percorre_vogais[::-1])
+'''    
