@@ -49,19 +49,10 @@ for tamanho_percorre_string in range(tamanho_percorre_string, tamanho_string):
         percorre_vogais = vogais[contador_vogais::tamanho_vogais]
         if percorre_vogais in percorre_string:
          quantidade_vogais += 1
+'''Para cada percorre_string varra toda string vogais comparando com percorre_string'''
+'''Verificando, if letra de percorre_string igual a letra de percorre vogais, quantidade_vogais += 1'''
     	 
 
 print(f"Tem {quantidade_vogais} vogais na palavra: {entrada}")
 
-'''Para cada percorre_string varra toda string vogais comparando com percorre_string'''
-'''Verificando, if letra de percorre_string igual a letra de percorre vogais, quantidade_vogais += 1'''
 
-
-'''
-    # VOGAIS
-    for tamanho_percorre_vogais in range(tamanho_percorre_vogais,tamanho_vogais):
-        contador_vogais -= 1
-        percorre_vogais = vogais[contador_vogais:tamanho_vogais]
-        tamanho_percorre_vogais = len(percorre_vogais)
-        print(percorre_vogais[::-1])
-'''    
