@@ -25,12 +25,30 @@ contador           = 0
 contador_invertido = tamanho_variavel
 tamanho_inicial    = 0
 
+'''
 while True:  
     if contador < tamanho_variavel: 
         print(variavel[:contador])
         contador += 1 
+        
     elif contador_invertido >= tamanho_inicial:
         print(variavel[:contador_invertido])
         contador_invertido -= 1
+        
     else: break
+'''
+''' TESTE '''    
+for contador in range(contador,tamanho_variavel):
+    if contador < tamanho_variavel: 
+        print(variavel[:contador])
+        contador += 1 
+            #contador_invertido >= tamanho_inicial:
+    elif contador > tamanho_variavel:
+        for contador_invertido in range(tamanho_variavel):
+        
+            print(variavel[:contador_invertido])
+            contador_invertido -= 1
+    
+    
+
 
