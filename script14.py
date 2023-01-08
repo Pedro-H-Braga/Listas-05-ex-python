@@ -31,3 +31,5 @@ if i and j != 0:
         else:
             contador += 1
             print(f"{multiplicador_i} | {multiplicador_j}")
+else:
+    print('<<Informe valores positivos diferentes de 0>>')
