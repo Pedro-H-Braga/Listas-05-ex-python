@@ -11,7 +11,7 @@ senha_padrao = 'swordfish'
 for verificador in senha_padrao:
     verificador = input('informe um senha: ')
     if verificador == senha_padrao:
-        print('!SENHA CORRETA!')
+        print('PARABÉNS: <<SENHA CORRETA>>')
         break
     else:
         print('SENHA INCORRETA: <<tente novamente>>')

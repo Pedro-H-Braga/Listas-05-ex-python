@@ -9,16 +9,25 @@ pegar resto de a por b > dividir b pelo resto até ser igual a 0
 
 #a = int(input('Informe o primeiro numero: '))
 #b = int(input('Informe o segundo numero: '))
-a = 1135
-b = 120
+a = 1500
+b = 155
 
 auxiliar = 0
-for a in range(True):
+for b in range(True):
 #while b != 0:  
-    # auxiliar  b
-    if auxiliar > 0:
-        auxiliar = b
-        b = a % b
-        a = auxiliar
+    if b == 0:
         print(f'O MDC pelo algoritmo de euclides é: {a}')
-    else: break
+        break
+    else: 
+        print(f'O MDC pelo algoritmo de euclides é: {a}')
+   
+    auxiliar = b
+    print(auxiliar)
+    b = a % b
+    print(b)
+    a = auxiliar
+    print(a)
+
+    '''
+        #break
+    '''
